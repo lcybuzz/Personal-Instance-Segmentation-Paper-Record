@@ -8,7 +8,7 @@
 ### **MNC**
 **[Paper]**  Instance-aware Semantic Segmentation via Multi-task Network Cascades<Br>
 **[Year]** CVPR 2016 Oral<Br>
-**[Authors]** 	[Jifeng Dai](http://www.jifengdai.org/), [Kaiming He](http://kaiminghe.com/),	[Jian Sun](http://www.jiansun.org/) 
+**[Authors]** 	[Jifeng Dai](http://www.jifengdai.org/), [Kaiming He](http://kaiminghe.com/),	[Jian Sun](http://www.jiansun.org/)  <Br>
 **[Pages]**  https://github.com/daijifeng001/MNC <Br>
 **[Description] ** <Br>
 
@@ -27,8 +27,8 @@
 **[Paper]**   R-FCN:Object Detection via Region-based Fully Convolutional Networks <Br>
 **[Year]** NIPS 2016 <Br>
 **[Authors]** 	[Jifeng Dai](http://www.jifengdai.org/), [Yi Li](https://liyi14.github.io/), [Kaiming He](http://kaiminghe.com/), [Jian Sun](http://www.jiansun.org/) <Br> 
-**[Pages]**  https://github.com/daijifeng001/R-FCN 
-**[Description] **
+**[Pages]**  https://github.com/daijifeng001/R-FCN  <Br>
+**[Description] ** <Br>
 
 ### **FCIS**
 **[Paper]**   Fully Convolutional Instance-aware Semantic Segmentation <Br>
@@ -53,12 +53,12 @@
 **[Authors]** [Min Bai](http://www.cs.toronto.edu/~mbai/), [Raquel Urtasun](http://www.cs.toronto.edu/~urtasun/) <Br>
 **[Pages]**  https://github.com/min2209/dwt <Br>
 **[Description] ** <Br>
-	1.用分水岭的思想做instance segmentation，分Direction Network和Watershed Transform Network两个阶段
-	2.Direction Network：计算pixel到最近边界的距离变换的单位梯度
-	3.Watershed Transform Network：以前一阶段得到的梯度为输入，计算16个Bin能量的概率，Bin 0表示边界部分的能量
-	4.边界部分有相同的能量，避免over segmentation问题
-	5.实验部分，计算confidence score没看懂，可以再研究一下
-	6.能量Bin的划分，每个能量在算loss权重部分没看懂
+1.用分水岭的思想做instance segmentation，分Direction Network和Watershed Transform Network两个阶段
+2.Direction Network：计算pixel到最近边界的距离变换的单位梯度
+3.Watershed Transform Network：以前一阶段得到的梯度为输入，计算16个Bin能量的概率，Bin 0表示边界部分的能量
+4.边界部分有相同的能量，避免over segmentation问题
+5.实验部分，计算confidence score没看懂，可以再研究一下
+6.能量Bin的划分，每个能量在算loss权重部分没看懂
 
 
 ### **BAIS★**
@@ -67,9 +67,9 @@
 **[Authors]** [Zeeshan Hayder](https://scholar.google.com.au/citations?user=K2INPyYAAAAJ&hl<Br>=en), [Xuming He](https://xmhe.bitbucket.io/), [Mathieu Salzmann](http://ttic.uchicago.edu/~salzmann/)
 **[Pages]**  https://vitalab.github.io/deep-learning/2017/08/22/boundary-aware.html<Br>
 **[Description] **<Br>
-	1) 提出一种基于距离变换的instance segmentation方法, 可以克服bounding box不准确的问题. 包括三部分: 提取bounding box, 预测object mask (OMN), object分类, 整个网络都是可微的, 可端到端训练;
-	2) OMN基于目标内像素到其边界的距离变换, 设计网络得到K个boundary-aware object mask, 然后decode成完整的object mask;
-	3) 仿照MNC, 采用multi-stage策略: 根据上一阶段得到的object mask, 对bounding box进行refine;
-	4) 实验及一些具体实现没研究, 如object mask与bounding box feature是如何结合起来的等;
+1) 提出一种基于距离变换的instance segmentation方法, 可以克服bounding box不准确的问题. 包括三部分: 提取bounding box, 预测object mask (OMN), object分类, 整个网络都是可微的, 可端到端训练;
+2) OMN基于目标内像素到其边界的距离变换, 设计网络得到K个boundary-aware object mask, 然后decode成完整的object mask;
+3) 仿照MNC, 采用multi-stage策略: 根据上一阶段得到的object mask, 对bounding box进行refine;
+4) 实验及一些具体实现没研究, 如object mask与bounding box feature是如何结合起来的等;
 	
 
