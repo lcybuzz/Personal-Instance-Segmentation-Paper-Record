@@ -2,10 +2,8 @@
 # Under construction!
 # Table of Contents
 - [Deep Learning Methods](#deep-learning-methods)
-- [Classical Methods](#classical-methods)
-- [Datasets](#datasets)
 
-## Instance Segmentation
+## Deep Learning Methods
 
 ### **MNC**
 **[Paper]**  Instance-aware Semantic Segmentation via Multi-task Network Cascades<Br>
