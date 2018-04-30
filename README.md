@@ -5,12 +5,17 @@
 
 ## Deep Learning Methods
 
-### **MNC**
+### **MNC ★★**
 **[Paper]**  Instance-aware Semantic Segmentation via Multi-task Network Cascades<Br>
 **[Year]** CVPR 2016 Oral<Br>
 **[Authors]** 	[Jifeng Dai](http://www.jifengdai.org/), [Kaiming He](http://kaiminghe.com/),	[Jian Sun](http://www.jiansun.org/)  <Br>
 **[Pages]**  https://github.com/daijifeng001/MNC <Br>
 **[Description]** <Br>
+1) 模型包含三个网络: differentiating instances, estimating masks, categorizing objects. 代码之后可以详细研究一下. <Br>
+2) 区分实例, 即得到每个instance的不分类别的bounding box, 类似RPN, <Br>
+3) 预测mask, 即得出每个bbox中的二值mask. bbox经过ROI Warp到固定尺寸, 用2个全连接层完成每个像素的二值分类. <Br>
+4) 分类, 即根据bbox和mask得到当前instance的类别. 此处对于输入特征考虑了两种选择, 一是直接将bbox的特征作为输入, 二是将bbox的特征与mask做点乘, 只输出mask部分的特征其余位置置零. <Br>
+5) 设计了5层的级联网络, 上述的三个步骤即为stage 1, 2, 3, 接下来以前面得到的class和bbox组成proposal, 再次进行mask预测和分类, 即重复stage 2和3. <Br>
 
 ### **InstanceFCN ★★**
 **[Paper]**  Instace-sensitive Fully Convolutional Networks <Br>
@@ -64,7 +69,7 @@
 ### **BAIS★**
 **[Paper]**  Boundary-aware Instance Segmentation<Br>
 **[Year]** CVPR 2017 <Br>
-**[Authors]** [Zeeshan Hayder](https://scholar.google.com.au/citations?user=K2INPyYAAAAJ&hl<Br>=en), [Xuming He](https://xmhe.bitbucket.io/), [Mathieu Salzmann](http://ttic.uchicago.edu/~salzmann/)
+**[Authors]** [Zeeshan Hayder](https://scholar.google.com.au/citations?user=K2INPyYAAAAJ&hl<Br>=en), [Xuming He](https://xmhe.bitbucket.io/), [Mathieu Salzmann](http://ttic.uchicago.edu/~salzmann/) <Br>
 **[Pages]**  https://vitalab.github.io/deep-learning/2017/08/22/boundary-aware.html<Br>
 **[Description]**<Br>
 1) 提出一种基于距离变换的instance segmentation方法, 可以克服bounding box不准确的问题. 包括三部分: 提取bounding box, 预测object mask (OMN), object分类, 整个网络都是可微的, 可端到端训练;
