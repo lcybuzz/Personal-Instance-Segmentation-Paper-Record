@@ -28,13 +28,6 @@
 3) **优点:** InstanceFCN具有local coherence的优点, 且没有任何high-dimensional layer. **缺点:**  inference时将输入进行多尺度缩放来处理multi-scale问题, 感觉有点简单粗暴; 模型的输出只能分辨每个instance, 但不能得出每个instance的类别.
 4) 没有找到开源代码, 对training和inference的具体实现没仔细研究.
 
-### **R-FCN**
-**[Paper]**   R-FCN:Object Detection via Region-based Fully Convolutional Networks <Br>
-**[Year]** NIPS 2016 <Br>
-**[Authors]** 	[Jifeng Dai](http://www.jifengdai.org/), [Yi Li](https://liyi14.github.io/), [Kaiming He](http://kaiminghe.com/), [Jian Sun](http://www.jiansun.org/) <Br> 
-**[Pages]**  https://github.com/daijifeng001/R-FCN  <Br>
-**[Description]** <Br>
-
 ### **FCIS**
 **[Paper]**   Fully Convolutional Instance-aware Semantic Segmentation <Br>
 **[Year]** CVPR 2017 Spotlight <Br>
