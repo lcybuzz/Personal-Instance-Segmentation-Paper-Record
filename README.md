@@ -5,6 +5,27 @@
 
 ## Deep Learning Methods
 
+### **SDS**
+**[Paper]**  Simultaneous Detection and Segmentation <Br>
+**[Year]** ECCV 2014 <Br>
+**[Authors]** 	[Bharath Hariharan](http://home.bharathh.info/), [Pablo Arbelaez](https://biomedicalcomputervision.uniandes.edu.co/),	[Ross Girshick](http://www.rossgirshick.info/), [Jitendra Malik](https://people.eecs.berkeley.edu/~malik/) <Br> 
+**[Pages]** https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/shape/sds/  <Br>
+**[Description]** <Br>
+
+### **Hypercolumns**
+**[Paper]**  Hypercolumns for Object Segmentation and Fine-grained Localization <Br>
+**[Year]** CVPR 2015 Oral<Br>
+**[Authors]** 	[Bharath Hariharan](http://home.bharathh.info/), [Pablo Arbelaez](https://biomedicalcomputervision.uniandes.edu.co/),	[Ross Girshick](http://www.rossgirshick.info/) <Br> 
+**[Pages]** https://github.com/bharath272/sds  <Br>
+**[Description]** <Br>
+
+### **CFM**
+**[Paper]**  Convolutional Feature Masking for Joint Object and Stuff Segmentation <Br>
+**[Year]** CVPR 2015 <Br>
+**[Authors]** 	[Jifeng Dai](http://www.jifengdai.org/), [Kaiming He](http://kaiminghe.com/),	[Jian Sun](http://www.jiansun.org/)  <Br>
+**[Pages]**   <Br>
+**[Description]** <Br>
+
 ### **MNC ★★**
 **[Paper]**  Instance-aware Semantic Segmentation via Multi-task Network Cascades<Br>
 **[Year]** CVPR 2016 Oral<Br>
@@ -28,10 +49,24 @@
 3) **优点:** InstanceFCN具有local coherence的优点, 且没有任何high-dimensional layer. **缺点:**  inference时将输入进行多尺度缩放来处理multi-scale问题, 感觉有点简单粗暴; 模型的输出只能分辨每个instance, 但不能得出每个instance的类别.
 4) 没有找到开源代码, 对training和inference的具体实现没仔细研究.
 
+### **MPA**
+**[Paper]**  Multi-scale Patch Aggregation (MPA) for Simultaneous Detection and Segmentation <Br>
+**[Year]** CVPR 2016 Oral <Br>
+**[Authors]** 	[Shu Liu](http://shuliu.me/), [Xiaojuan Qi](http://kaiminghe.com/),	[Jianping Shi](http://shijianping.me/), Hong Zhang, [Jiaya Jia](http://www.cse.cuhk.edu.hk/leojia/) <Br> 
+**[Pages]**  <Br>
+**[Description]** <Br>
+
+### **MultiPathNet**
+**[Paper]**  A MultiPath Network for Object Detection <Br>
+**[Year]** BMVC 2016 <Br>
+**[Authors]** 	[Sergey Zagoruyko](http://imagine.enpc.fr/~zagoruys/), [Adam Lerer](http://www.pedro.opinheiro.com/),	[Tsung-Yi Lin](https://vision.cornell.edu/se3/people/tsung-yi-lin/), [Pedro O. Pinheiro](http://www.pedro.opinheiro.com/) <Br> 
+**[Pages]** https://github.com/facebookresearch/multipathnet  <Br>
+**[Description]** <Br>
+
 ### **FCIS**
 **[Paper]**   Fully Convolutional Instance-aware Semantic Segmentation <Br>
 **[Year]** CVPR 2017 Spotlight <Br>
-**[Authors]** 	[Yi Li](https://liyi14.github.io/), 	[Haozhi Qi](http://haozhi.io/), Xiangyang Ji, [Yichen Wei](https://www.microsoft.com/en-us/research/people/yichenw/)  <Br>
+**[Authors]** 	[Yi Li](https://liyi14.github.io/), 	[Haozhi Qi](https://xjqi.github.io/), Xiangyang Ji, [Yichen Wei](https://www.microsoft.com/en-us/research/people/yichenw/)  <Br>
 **[Pages]**  https://github.com/daijifeng001/R-FCN  <Br>
 **[Description]** <Br>
 
