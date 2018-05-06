@@ -46,7 +46,7 @@
 **[Description]** <Br>
 1) DL用于Instance-segmentation较早的一篇paper. 在FCN的基础上提出instance-sensitive的InstanceFCN, 通过将每个pixel相对于某instance的relative position进行assemble, 得到output instance candidate.
 2) **Instance-sensitive score maps**: 将FCN的"each output pixel is a classifier of an object category"改造成"each output pixel is a classifier of relative positions of instances". **Instance assembling module**: 将每个sliding window划分成k x k的网格, 对应于k^2个relative position. 相同网格中的像素取对应于相同位置的score map进行assemble.
-3) **优点:** InstanceFCN具有local coherence的优点, 且没有任何high-dimensional layer. **缺点:**  inference时将输入进行多尺度缩放来处理multi-scale问题, 感觉有点简单粗暴; 模型的输出只能分辨每个instance, 但不能得出每个instance的类别.
+3) **优点:** InstanceFCN具有local coherence的优点, 且没有任何high-dimensional layer. **缺点:**  inference时将输入进行多尺度缩放来处理multi-scale问题, 感觉有点简单粗暴; 模型的输出只能分辨每个instance mask, 但不能得出每个instance的类别.
 4) 没有找到开源代码, 对training和inference的具体实现没仔细研究.
 
 ### **MPA**
@@ -63,13 +63,16 @@
 **[Pages]** https://github.com/facebookresearch/multipathnet  <Br>
 **[Description]** <Br>
 
-### **FCIS**
+### **FCIS ★★**
 **[Paper]**   Fully Convolutional Instance-aware Semantic Segmentation <Br>
 **[Year]** CVPR 2017 Spotlight <Br>
 **[Authors]** 	[Yi Li](https://liyi14.github.io/), 	[Haozhi Qi](https://xjqi.github.io/), Xiangyang Ji, [Yichen Wei](https://www.microsoft.com/en-us/research/people/yichenw/)  <Br>
 **[Pages]**  https://github.com/daijifeng001/R-FCN  <Br>
 **[Description]** <Br>
-
+1) 基于InstanceFCN中position sensitive score map的概念, 提出了end to end的可区分类别的实例分割方法. <Br>
+2) backbone为resnet-101,从conv4开始分为两支, RPN一支产生ROI, 另一支产生2K^2(C+1)个位置敏感score map. 之后对每个ROI进行根据K*K个相对位置进行assemble, 每类输出ROI inside 和ROI outside两个score map. 根据inside和outside score map的大小组合可以得到一个pixel的两个信息: 1.它是否位于某个目标的相应位置上; 2.它是否属于该目标分割的前景. 最后通过max和softmax操作得到ROI的类别和segmentation mask. <Br>
+3) 个人总结, 这种encode K*K的相对位置的策略有几个好处, 1.对位置敏感, 这正是instance任务需要的; 2.对ROI的偏移有一定程度的鲁棒性; 3.可以使需要对每个ROI分别进行的subnetwork变得更小, 节省时间.  <Br>
+	
 ### **FastMask ★**
 **[Paper]** FastMask: Segment Multi-scale Object Candidates in One Shot <Br>
 **[Year]** CVPR 2017 Spotlight  <Br>
