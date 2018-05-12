@@ -66,8 +66,8 @@
 ### **FCIS ★★**
 **[Paper]**   Fully Convolutional Instance-aware Semantic Segmentation <Br>
 **[Year]** CVPR 2017 Spotlight <Br>
-**[Authors]** 	[Yi Li](https://liyi14.github.io/), 	[Haozhi Qi](https://xjqi.github.io/), Xiangyang Ji, [Yichen Wei](https://www.microsoft.com/en-us/research/people/yichenw/)  <Br>
-**[Pages]**  https://github.com/daijifeng001/R-FCN  <Br>
+**[Authors]** 	[Yi Li](https://liyi14.github.io/), 	[Haozhi Qi](https://xjqi.github.io/), [Jifeng Dai](http://www.jifengdai.org/), Xiangyang Ji, [Yichen Wei](https://www.microsoft.com/en-us/research/people/yichenw/)  <Br>
+**[Pages]** https://github.com/msracver/FCIS  <Br>
 **[Description]** <Br>
 1) 基于InstanceFCN中position sensitive score map的概念, 提出了end to end的可区分类别的实例分割方法. <Br>
 2) backbone为resnet-101,从conv4开始分为两支, RPN一支产生ROI, 另一支产生2K^2(C+1)个位置敏感score map. 之后对每个ROI进行根据K*K个相对位置进行assemble, 每类输出ROI inside 和ROI outside两个score map. 根据inside和outside score map的大小组合可以得到一个pixel的两个信息: 1.它是否位于某个目标的相应位置上; 2.它是否属于该目标分割的前景. 最后通过max和softmax操作得到ROI的类别和segmentation mask. <Br>
