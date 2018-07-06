@@ -108,4 +108,16 @@
 3) 仿照MNC, 采用multi-stage策略: 根据上一阶段得到的object mask, 对bounding box进行refine;
 4) 实验及一些具体实现没研究, 如object mask与bounding box feature是如何结合起来的等;
 	
-
+### **Mask R-CNN ★★★**
+**[Paper]**  Mask R-CNN <Br>
+**[Year]** ICCV 2017 <Br>
+**[Authors]** [Kaiming He](http://kaiminghe.com/), [Georgia Gkioxari](https://gkioxari.github.io/), [Piotr Dollár](https://pdollar.github.io/), [Ross Girshick](http://www.rossgirshick.info/) <Br>
+**[Pages]** 
+https://github.com/facebookresearch/Detectron <Br>
+https://github.com/matterport/Mask_RCNN <Br>
+**[Description]**<Br>
+1) 在Faster R-CNN基础上加入了Mask Head, 用于预测每个目标的mask. <Br>
+2) 骨干网络换成了ResNeXt+FPN, 根据ROI的尺寸选择从C2到C5的某个level中取feature作为Mask和Cls Head的输入. <Br>
+3) Mask Head为每个类别都预测一个mask, 最后取Cls Head中预测的概率最大的类别作为此目标分割结果, 这么做的好处是避免了类间竞争, 对instance segmentation任务来说能带来明显的性能提升. <Br>
+4) ROI Align代替ROI pooling, 用双线性插值计算相应位置的feature而不是简单地取整. 这可以大大减小feature的位置偏差, 对预测mask其重要作用. <Br>
+5) Mask R-CNN已集成到Deterctron中, 应掌握这个框架. <Br>
