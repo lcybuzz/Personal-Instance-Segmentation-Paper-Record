@@ -8,7 +8,7 @@
   - ★★★ <Br>
   **[Mask R-CNN]** <Br>
   - ★★ <Br>
-  **[MNC]**, **[InstanceFCN]**, ***[Dynamically Instantiated Network]***, **[FCIS]**,  <Br>
+  **[MNC]**, **[InstanceFCN]**, **[Dynamically Instantiated Network]**, **[FCIS]**,  <Br>
   - ★ <Br>
    **[FastMask]**, **[DWT]**, **[BAIS]** <Br>
 
