@@ -6,11 +6,11 @@
 # Rank
 - Deep Learning Methods <Br>
   - ★★★ <Br>
-  **Mask R-CNN** <Br>
+  **<Mask R-CNN>** <Br>
   - ★★ <Br>
-  **MNC**, **InstanceFCN**, ***Dynamically Instantiated Network***, **FCIS**,  <Br>
+  **<MNC>**, **<InstanceFCN>**, ***<Dynamically Instantiated Network>***, **<FCIS>**,  <Br>
   - ★ <Br>
-   **FastMask**, **DWT**, **BAIS** <Br>
+   **<FastMask>**, **<DWT>**, **<BAIS>** <Br>
 
 # Deep Learning Methods
 
