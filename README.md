@@ -3,7 +3,16 @@
 # Table of Contents
 - [Deep Learning Methods](#deep-learning-methods)
 
-## Deep Learning Methods
+# Rank
+- Deep Learning Methods <Br>
+  - ★★★ <Br>
+  **Mask R-CNN** <Br>
+  - ★★ <Br>
+  **MNC**, **InstanceFCN**, ***Dynamically Instantiated Network***, **FCIS**,  <Br>
+  - ★ <Br>
+   **FastMask**, **DWT**, **BAIS** <Br>
+
+# Deep Learning Methods
 
 ### **SDS**
 **[Paper]**  Simultaneous Detection and Segmentation <Br>
@@ -63,6 +72,17 @@
 **[Pages]** https://github.com/facebookresearch/multipathnet  <Br>
 **[Description]** <Br>
 
+### ***Dynamically Instantiated Network* ★★**
+**[Paper]**  Pixelwise Instance Segmentation with a Dynamically Instantiated Network <Br>
+**[Year]** CVPR 2017 <Br>
+**[Authors]**  [Anurag Arnab](http://www.robots.ox.ac.uk/~aarnab/), [Philip Torr](http://www.robots.ox.ac.uk/~phst/)<Br>
+**[Pages]** http://www.robots.ox.ac.uk/~aarnab/instances_dynamic_network.html  <Br>
+**[Description]** <Br>
+1) 粗读. 本篇paper的思路比较新奇, 在全图上做segmentation和detection, 再用instance CRF区分instance, 整个模型可用类似CRFasRNN的思路端到端完成. <Br>
+2) semantic segmentation部分用semantic CRF. <Br>
+3) Instance CRF的unary potential包括三部分, box term, global term和shape term. 其中box term和global term是根据detection和segmentation共同确定的, shape term是根据预先定义的shape exemplar决定的. Pairwise term是一densely-connected Gaussian potentials. <Br>
+4) loss采用cross entropy loss. 这里groundtruth和prediction的对应是根据最大IoU得到的. <Br>
+
 ### **FCIS ★★**
 **[Paper]**   Fully Convolutional Instance-aware Semantic Segmentation <Br>
 **[Year]** CVPR 2017 Spotlight <Br>
@@ -83,7 +103,7 @@
 2) body net部分进行特征提取. 提取到的特征组成多尺度的特征金字塔, 分别送入共享参数的neck module提取multi-scale特征, neck module为residual neck. 得到的特征图进行降维后提取dense sliding window, sliding windows经batch normalization后送入head module, head module为attention head 
 3) neck module部分以2为步长对feature map进行下采样, 可能导致尺度过于稀疏. 因此提出two-stream FastMask architecture, 使scale更密集.
 
-### **DWT★**
+### **DWT ★**
 **[Paper]**  Deep Watershed Transformation for Instance Segmentation <Br>
 **[Year]** CVPR 2017  <Br>
 **[Authors]** [Min Bai](http://www.cs.toronto.edu/~mbai/), [Raquel Urtasun](http://www.cs.toronto.edu/~urtasun/) <Br>
@@ -97,7 +117,7 @@
 6) 能量Bin的划分，每个能量在算loss权重部分没看懂
 
 
-### **BAIS★**
+### **BAIS ★**
 **[Paper]**  Boundary-aware Instance Segmentation<Br>
 **[Year]** CVPR 2017 <Br>
 **[Authors]** [Zeeshan Hayder](https://scholar.google.com.au/citations?user=K2INPyYAAAAJ&hl<Br>=en), [Xuming He](https://xmhe.bitbucket.io/), [Mathieu Salzmann](http://ttic.uchicago.edu/~salzmann/) <Br>
