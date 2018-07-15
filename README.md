@@ -10,7 +10,7 @@
   - ★★ <Br>
   **[MNC]**, **[InstanceFCN]**, **[Dynamically Instantiated Network]**, **[FCIS]**,  <Br>
   - ★ <Br>
-   **[FastMask]**, **[DWT]**, **[BAIS]** <Br>
+  **[MPA]**, **[FastMask]**, **[DWT]**, **[BAIS]** <Br>
 
 # Deep Learning Methods
 
