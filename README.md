@@ -58,7 +58,7 @@
 3) **优点:** InstanceFCN具有local coherence的优点, 且没有任何high-dimensional layer. **缺点:**  inference时将输入进行多尺度缩放来处理multi-scale问题, 感觉有点简单粗暴; 模型的输出只能分辨每个instance mask, 但不能得出每个instance的类别.
 4) 没有找到开源代码, 对training和inference的具体实现没仔细研究.
 
-### **MPA**
+### **MPA ★**
 **[Paper]**  Multi-scale Patch Aggregation (MPA) for Simultaneous Detection and Segmentation <Br>
 **[Year]** CVPR 2016 Oral <Br>
 **[Authors]** 	[Shu Liu](http://shuliu.me/), [Xiaojuan Qi](http://kaiminghe.com/),	[Jianping Shi](http://shijianping.me/), Hong Zhang, [Jiaya Jia](http://www.cse.cuhk.edu.hk/leojia/) <Br> 
@@ -67,6 +67,7 @@
 1) 粗读, 提出了一种基于patch的instance segmentation方法, 其中patch对应的是目标的一部分, 而不是整个目标. <Br>
 2) 经过若干层特征提取后(VGG16), 在feature map上提取四个尺度的patch, 类似于ROI pooling那一套, 再将patch align到相同尺寸, 分别送入分类和分割两支, 得到label和segmentation mask. patch的真值是根据一系列规则确定的. <Br>
 3) 得到patch的label和mask后, 对相同尺度的patch在水平和竖直方向进行aggregate, 聚合相同label的patch的mask. <Br>
+4) 几点疑问: 密集取patch送入后面的两个网络是否会造成inference速度很慢? 四个尺度的path且没经过坐标修正, 鲁棒性够强吗? mask预测一支对于部分目标能很好地分割吗, 会不会存在混淆(比如patch里包括的是两个人的衣服, 能否准确把其中的一件衣服分为前景)
 
 ### **MultiPathNet**
 **[Paper]**  A MultiPath Network for Object Detection <Br>
