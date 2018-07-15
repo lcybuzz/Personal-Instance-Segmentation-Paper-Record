@@ -64,6 +64,9 @@
 **[Authors]** 	[Shu Liu](http://shuliu.me/), [Xiaojuan Qi](http://kaiminghe.com/),	[Jianping Shi](http://shijianping.me/), Hong Zhang, [Jiaya Jia](http://www.cse.cuhk.edu.hk/leojia/) <Br> 
 **[Pages]**  <Br>
 **[Description]** <Br>
+1) 粗读, 提出了一种基于patch的instance segmentation方法, 其中patch对应的是目标的一部分, 而不是整个目标. <Br>
+2) 经过若干层特征提取后(VGG16), 在feature map上提取四个尺度的patch, 类似于ROI pooling那一套, 再将patch align到相同尺寸, 分别送入分类和分割两支, 得到label和segmentation mask. patch的真值是根据一系列规则确定的. <Br>
+3) 得到patch的label和mask后, 对相同尺度的patch在水平和竖直方向进行aggregate, 聚合相同label的patch的mask. <Br>
 
 ### **MultiPathNet**
 **[Paper]**  A MultiPath Network for Object Detection <Br>
