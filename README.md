@@ -39,7 +39,7 @@
 ### ***Monocular Object Instance Segmentation and Depth Ordering with CNNs***
 **[Paper]**  Monocular Object Instance Segmentation and Depth Ordering with CNNs <Br>
 **[Year]** ICCV 2015 <Br>
-**[Authors]** 	[Ziyu Zhang](https://ziyu-zhang.github.io/）, [Alexander Schwing](http://alexander-schwing.de/), [Sanja Fidler](http://www.cs.utoronto.ca/~fidler/), [Raquel Urtasun](http://www.cs.toronto.edu/~urtasun/) <Br>
+**[Authors]** 	[Ziyu Zhang](https://ziyu-zhang.github.io/), [Alexander Schwing](http://alexander-schwing.de/), [Sanja Fidler](http://www.cs.utoronto.ca/~fidler/), [Raquel Urtasun](http://www.cs.toronto.edu/~urtasun/) <Br>
 **[Pages]**   <Br>
 **[Description]** <Br>
 
