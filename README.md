@@ -91,6 +91,13 @@
 3) 得到patch的label和mask后, 对相同尺度的patch在水平和竖直方向进行aggregate, 聚合相同label的patch的mask. <Br>
 4) 几点疑问: 密集取patch送入后面的两个网络是否会造成inference速度很慢? 四个尺度的path且没经过坐标修正, 鲁棒性够强吗? mask预测一支对于部分目标能很好地分割吗, 会不会存在混淆(比如patch里包括的是两个人的衣服, 能否准确把其中的一件衣服分为前景)
 
+### ***Reversible Recursive Instance-Level Object Segmentation***
+**[Paper]**  Reversible Recursive Instance-Level Object Segmentation <Br>
+**[Year]** CVPR 2016  <Br>
+**[Authors]** [Xiaodan Liang](http://www.cs.cmu.edu/~xiaodan1/), [Yunchao Wei](https://weiyc.github.io/), [Xiaohui Shen](http://users.eecs.northwestern.edu/~xsh835/), [Zequn Jie](http://jiezequn.me/), [Jiashi Feng](https://sites.google.com/site/jshfeng/), Liang Lin, [Shuicheng Yan](https://www.ece.nus.edu.sg/stfpage/eleyans/) <Br> 
+**[Pages]**  <Br>
+**[Description]** <Br
+
 ### **MultiPathNet**
 **[Paper]**  A MultiPath Network for Object Detection <Br>
 **[Year]** BMVC 2016 <Br>
