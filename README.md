@@ -42,6 +42,13 @@
 **[Authors]** 	[Ziyu Zhang](https://ziyu-zhang.github.io/), [Alexander Schwing](http://alexander-schwing.de/), [Sanja Fidler](http://www.cs.utoronto.ca/~fidler/), [Raquel Urtasun](http://www.cs.toronto.edu/~urtasun/) <Br>
 **[Pages]**   <Br>
 **[Description]** <Br>
+	
+### **DeepMask**
+**[Paper]**  Learning to segment object candidates <Br>
+**[Year]** NIPS 2015 <Br>
+**[Authors]** 	[Pedro O. Pinheiro](http://www.pedro.opinheiro.com/), [Tsung-Yi Lin](https://scholar.google.de/citations?user=_BPdgV0AAAAJ&hl=en&oi=sra), [Ronan Collobert](https://scholar.google.de/citations?user=32w7x1cAAAAJ&hl=en&oi=sra), [Piotr Dollàr](https://pdollar.github.io/) <Br>
+**[Pages]**   <Br>
+**[Description]** <Br>
 
 ### **MNC ★★**
 **[Paper]**  Instance-aware Semantic Segmentation via Multi-task Network Cascades<Br>
@@ -54,6 +61,13 @@
 3) 预测mask, 即得出每个bbox中的二值mask. bbox经过ROI Warp到固定尺寸, 用2个全连接层完成每个像素的二值分类. <Br>
 4) 分类, 即根据bbox和mask得到当前instance的类别. 此处对于输入特征考虑了两种选择, 一是直接将bbox的特征作为输入, 二是将bbox的特征与mask做点乘, 只输出mask部分的特征其余位置置零. <Br>
 5) 设计了5层的级联网络, 上述的三个步骤即为stage 1, 2, 3, 接下来以前面得到的class和bbox组成proposal, 再次进行mask预测和分类, 即重复stage 2和3. <Br>
+	
+### **SharpMask**
+**[Paper]**  ILearning to Refine Object Segments <Br>
+**[Year]** ECCV 2016 Spotlight <Br>
+**[Authors]** [Pedro O. Pinheiro](http://www.pedro.opinheiro.com/), [Tsung-Yi Lin](https://scholar.google.de/citations?user=_BPdgV0AAAAJ&hl=en&oi=sra), [Ronan Collobert](https://scholar.google.de/citations?user=32w7x1cAAAAJ&hl=en&oi=sra), [Piotr Dollàr](https://pdollar.github.io/) <Br> 
+**[Pages]**  <Br>
+**[Description]** <Br>
 
 ### **InstanceFCN ★★**
 **[Paper]**  Instace-sensitive Fully Convolutional Networks <Br>
@@ -162,15 +176,29 @@ https://github.com/matterport/Mask_RCNN <Br>
 5) Mask R-CNN已集成到Deterctron中, 应掌握这个框架. <Br>
 	
 ### **SGN**
-**[Paper]**  SGN: Sequential grouping networks for instance segmentation. <Br>
+**[Paper]**  SGN: Sequential grouping networks for instance segmentation <Br>
 **[Year]** ICCV 2017 <Br>
 **[Authors]** [Shu Liu](http://shuliu.me/), [Jiaya Jia](http://www.cse.cuhk.edu.hk/~leojia/), [Sanja Fidler](https://www.cs.utoronto.ca/~fidler/), [Raquel Urtasun](http://www.cs.toronto.edu/~urtasun/) <Br>
 **[Pages]** <Br>
+**[Description]**<Br>
+
+### **BlitzNet**
+**[Paper]**  BlitzNet: A Real-Time Deep Network for Scene Understanding <Br>
+**[Year]** ICCV 2017 <Br>
+**[Authors]**  [Nikita Dvornik](http://lear.inrialpes.fr/people/mdvornik/), [Konstantin Shmelkov](http://lear.inrialpes.fr/people/kshmelko/), [Julien Mairal](http://lear.inrialpes.fr/people/mairal/), [Cordelia Schmid](http://lear.inrialpes.fr/people/schmid)<Br>
+**[Pages]** http://thoth.inrialpes.fr/research/blitznet/<Br>
 **[Description]**<Br>
 	
 ### **PANet**
 **[Paper]**  Path Aggregation Network for Instance Segmentation <Br>
 **[Year]** CVPR 2018 Spotlight <Br>
 **[Authors]** [Shu Liu](http://shuliu.me/), Lu Qi, Haifang Qin, [Jianping Shi](http://shijianping.me/), [Jiaya Jia](http://www.cse.cuhk.edu.hk/~leojia/) <Br>
+**[Pages]** <Br>
+**[Description]**<Br>
+	
+### **MaskLab**
+**[Paper]**  MaskLab: Instance Segmentation by Refining Object Detection with Semantic and Direction Features  <Br>
+**[Year]** CVPR 2018 <Br>
+**[Authors]** [Liang-Chieh Chen](http://liangchiehchen.com/), [Alexander Hermans](https://www.vision.rwth-aachen.de/person/10/), [George Papandreou](http://ttic.uchicago.edu/~gpapan/), [Florian Schroff](http://www.florian-schroff.de/), [Peng Wang](https://scholar.google.de/citations?user=7lLdhrIAAAAJ&hl=en&oi=ao), Hartwig Adam <Br>
 **[Pages]** <Br>
 **[Description]**<Br>
