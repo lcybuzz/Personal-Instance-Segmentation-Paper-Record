@@ -8,7 +8,7 @@
   - ★★★ <Br>
   **[Mask R-CNN]** <Br>
   - ★★ <Br>
-  **[MNC]**, **[InstanceFCN]**, **[Dynamically Instantiated Network]**, **[FCIS]**,  <Br>
+  **[MNC]**, **[InstanceFCN]**, **[Dynamically Instantiated Network]**, **[FCIS]**, **[PANet]**<Br>
   - ★ <Br>
   **[MPA]**, **[FastMask]**, **[DWT]**, **[BAIS]** <Br>
 
@@ -196,12 +196,16 @@ https://github.com/matterport/Mask_RCNN <Br>
 **[Pages]** http://thoth.inrialpes.fr/research/blitznet/<Br>
 **[Description]**<Br>
 	
-### **PANet**
+### **PANet ★★**
 **[Paper]**  Path Aggregation Network for Instance Segmentation <Br>
 **[Year]** CVPR 2018 Spotlight <Br>
 **[Authors]** [Shu Liu](http://shuliu.me/), Lu Qi, Haifang Qin, [Jianping Shi](http://shijianping.me/), [Jiaya Jia](http://www.cse.cuhk.edu.hk/~leojia/) <Br>
 **[Pages]** <Br>
 **[Description]**<Br>
+1) Mask R-CNN的改进, COCO 2017 Instance冠军. paper偏工程, 很多东西理论性不强, 但实际工程中可以借鉴<Br>
+2) 在FPN后面加了一Bottom-up Path Augmentation, 就是给高层特征加入底层语义信息. <Br>
+3) Adaptive Feature Pooling, 就是从每个level都取特征, 在后续网络的某个位置用MAX或SUM融合起来, box一支在fc1和fc2之间融合效果好, mask一支貌似没提到. <Br>
+4) mask一支加入了一全连接层, 并与原来的结果fuse起来. 道理说服力不强, 但从结果来看提升了效果. <Br>
 	
 ### **MaskLab**
 **[Paper]**  MaskLab: Instance Segmentation by Refining Object Detection with Semantic and Direction Features  <Br>
