@@ -10,7 +10,7 @@
   - ★★ <Br>
   **[MNC]**, **[InstanceFCN]**, **[Dynamically Instantiated Network]**, **[FCIS]**, **[PANet]**<Br>
   - ★ <Br>
-  **[MPA]**, **[FastMask]**, **[DWT]**, **[BAIS]** <Br>
+  **[MPA]**, **[FastMask]**, **[DWT]**, **[BAIS]**, **[MaskLab]** <Br>
 
 # Deep Learning Methods
 
@@ -207,9 +207,13 @@ https://github.com/matterport/Mask_RCNN <Br>
 3) Adaptive Feature Pooling, 就是从每个level都取特征, 在后续网络的某个位置用MAX或SUM融合起来, box一支在fc1和fc2之间融合效果好, mask一支貌似没提到. <Br>
 4) mask一支加入了一全连接层, 并与原来的结果fuse起来. 道理说服力不强, 但从结果来看提升了效果. <Br>
 	
-### **MaskLab**
+### **MaskLab ★**
 **[Paper]**  MaskLab: Instance Segmentation by Refining Object Detection with Semantic and Direction Features  <Br>
 **[Year]** CVPR 2018 <Br>
 **[Authors]** [Liang-Chieh Chen](http://liangchiehchen.com/), [Alexander Hermans](https://www.vision.rwth-aachen.de/person/10/), [George Papandreou](http://ttic.uchicago.edu/~gpapan/), [Florian Schroff](http://www.florian-schroff.de/), [Peng Wang](https://scholar.google.de/citations?user=7lLdhrIAAAAJ&hl=en&oi=ao), Hartwig Adam <Br>
 **[Pages]** <Br>
 **[Description]**<Br>
+1) Liang-Chieh Chen的xxLab系列又一弹, detection-based和segmentation-based结合做instance. 粗读, 和DeepLab一样还是偏工程的. <Br>
+2) 分为box detection, semantic segmentation logits和direction prediction logits三部分. box detection负责检测目标的bounding box和其类别; semantic segmentation负责得到整张图中的分割label map; direction prediction负责得到每个pixel相对于其所属instance中心的方向. <Br>
+3) 检测出某一目标的bbox和类别后, 从semantic和direction的feature中分别crop出相应区域, 将direction进行assemble, 做法与instanceFCN基本相同, 然后把semantic和direction的feature map concat起来完成最后的分割. <Br>
+4) 用了Hypercolumn, atrous, deform conv等多种技术, 目前看来效果不如mask r-cnn(20180721). <Br>
