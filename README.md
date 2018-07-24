@@ -10,7 +10,7 @@
   - ★★ <Br>
   **[MNC]**, **[InstanceFCN]**, **[Dynamically Instantiated Network]**, **[FCIS]**, **[PANet]**<Br>
   - ★ <Br>
-  **[MPA]**, **[DWT]**, **[BAIS]**, **[MaskLab]** <Br>
+  **[MPA]**, **[DWT]**, **[BAIS]**, **[MaskLab]**, **[InstanceCut]** <Br>
 
 # Deep Learning Methods
 
@@ -157,6 +157,9 @@
 **[Authors]** Alexander Kirillov, Evgeny Levinkov, [Bjoern Andres](http://www.andres.sc/), Bogdan Savchynskyy, [Carsten Rother](https://hci.iwr.uni-heidelberg.de/vislearn/) <Br>
 **[Pages]** <Br>
 **[Description]**<Br>
+1) 粗读. 提出一种通过instanc-agnostic的segmentation和edge detection做instance segmentation的方法, . <Br>
+2) 分割和边缘检测使用的都是FCN, 其中边缘检测的网络为了得到sharp edge做了一些改动. 最后通过image partition block使用segmentation和edge的信息得到instance的分割结果, 为了加速是在superpixel上进行的, 这段没仔细看<Br>
+3) 此方法的一个很大缺点是不适用于不连续的instance, 此外其性能与soa相比还有很大差距. 这一类的方法虽然思路上比较新奇, 但实际应用上还是有很大局限性, 并且它们大多只在cityscape上进行实验, 可能是这种方法只对这种目标较小且形状较为简单的情况效果好? <Br>
 
 ### **Mask R-CNN ★★★**
 **[Paper]**  Mask R-CNN <Br>
