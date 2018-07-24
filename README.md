@@ -10,7 +10,7 @@
   - ★★ <Br>
   **[MNC]**, **[InstanceFCN]**, **[Dynamically Instantiated Network]**, **[FCIS]**, **[PANet]**<Br>
   - ★ <Br>
-  **[MPA]**, **[FastMask]**, **[DWT]**, **[BAIS]**, **[MaskLab]** <Br>
+  **[MPA]**, **[DWT]**, **[BAIS]**, **[MaskLab]** <Br>
 
 # Deep Learning Methods
 
@@ -126,16 +126,6 @@
 2) backbone为resnet-101,从conv4开始分为两支, RPN一支产生ROI, 另一支产生2K^2(C+1)个位置敏感score map. 之后对每个ROI进行根据K*K个相对位置进行assemble, 每类输出ROI inside 和ROI outside两个score map. 根据inside和outside score map的大小组合可以得到一个pixel的两个信息: 1.它是否位于某个目标的相应位置上; 2.它是否属于该目标分割的前景. 最后通过max和softmax操作得到ROI的类别和segmentation mask. <Br>
 3) 个人总结, 这种encode K*K的相对位置的策略有几个好处, 1.对位置敏感, 这正是instance任务需要的; 2.对ROI的偏移有一定程度的鲁棒性; 3.可以使需要对每个ROI分别进行的subnetwork变得更小, 节省时间.  <Br>
 	
-### **FastMask ★**
-**[Paper]** FastMask: Segment Multi-scale Object Candidates in One Shot <Br>
-**[Year]** CVPR 2017 Spotlight  <Br>
-**[Authors]** [Hexiang Hu](http://hexianghu.com/), [Shiyi Lan](https://voidrank.github.io/), Yuning Jiang, Zhimin Cao, [Fei Sha](http://www-bcf.usc.edu/~feisha/) <Br>
-**[Pages]**  https://github.com/voidrank/FastMask <Br>
-**[Description]**<Br>
-1) 粗读. 提出了一个body, neck, head的one-shot模型. 
-2) body net部分进行特征提取. 提取到的特征组成多尺度的特征金字塔, 分别送入共享参数的neck module提取multi-scale特征, neck module为residual neck. 得到的特征图进行降维后提取dense sliding window, sliding windows经batch normalization后送入head module, head module为attention head 
-3) neck module部分以2为步长对feature map进行下采样, 可能导致尺度过于稀疏. 因此提出two-stream FastMask architecture, 使scale更密集.
-
 ### **DWT ★**
 **[Paper]**  Deep Watershed Transformation for Instance Segmentation <Br>
 **[Year]** CVPR 2017  <Br>
