@@ -8,9 +8,9 @@
   - ★★★ <Br>
   **[Mask R-CNN]** <Br>
   - ★★ <Br>
-  **[MNC]**, **[InstanceFCN]**, **[Dynamically Instantiated Network]**, **[FCIS]**, **[PANet]**, **[PGN]**<Br>
+  **[MNC]**, **[InstanceFCN]**, **[Dynamically Instantiated Network]**, **[FCIS]**, **[PANet]**<Br>
   - ★ <Br>
-  **[MPA]**, **[DWT]**, **[BAIS]**, **[MaskLab]**, **[InstanceCut]**, **[SGN]** <Br>
+  **[MPA]**, **[DWT]**, **[BAIS]**, **[MaskLab]**, **[InstanceCut]**, **[SGN]**, **[PGN]** <Br>
 
 # Deep Learning Methods
 
@@ -214,13 +214,13 @@ https://github.com/matterport/Mask_RCNN <Br>
 3) 检测出某一目标的bbox和类别后, 从semantic和direction的feature中分别crop出相应区域, 将direction进行assemble, 做法与instanceFCN基本相同, 然后把semantic和direction的feature map concat起来完成最后的分割. <Br>
 4) 用了Hypercolumn, atrous, deform conv等多种技术, 目前看来效果不如mask r-cnn(20180721). <Br>
 	
-### **PGN ★★**
+### **PGN ★**
 **[Paper]**  MaskLab: Instance Segmentation by Refining Object Detection with Semantic and Direction Features  <Br>
 **[Year]** CVPR 2018 <Br>
 **[Authors]** [Ke Gong](https://github.com/Engineering-Course), [Xiaodan Liang](http://www.cs.cmu.edu/afs/cs/user/xiaodan1/www/), [Yicheng Li](https://github.com/yicheng-li), [Yimin Chen](https://scholar.google.com/citations?user=rpLGwAQAAAAJ&hl=en), [Ming Yang](https://github.com/ufoym), [Liang Lin](http://www.linliang.net/)<Br>
 **[Pages]** https://github.com/Engineering-Course/CIHP_PGN<Br>
 **[Description]**<Br>
-1) 分割+边缘检测做instance segmentation的一篇paper, 主要用于多人解析中. <Br>
+1) 分割+边缘检测做instance segmentation的一篇paper, 主要用于多人解析中, 在一般的实力分割数据集中不一定有非常好的效果. <Br>
 2) 分为backbone网络, segmentation branch, edge detection branch和refinement branch四部分. backbone为resnet101, 把最后三个block concat起来作为多尺度feature送入接下来的branch中; segmentation branch和edge detection branch结构钢相似, 都使用了pyramid pooling, 此外边缘检测部分还使用了deep supervision, 即将最后三个block的feature拉出来做ASPP后都去预测边缘; 最后, 分割和边缘检测的结构concat起来送入refinement branch得到最后的分割和边缘检测结果. <Br>
 3) instance partition部分, 首先水平和垂直地扫描, 根据edge确定属于同一instance的segments, 这些线段组成一连通图; 用BFS找到属于同一instance的pixel; 最后进行grouping, 去掉边缘检测的一些假边缘产生的小区域. <Br>
 4) 提出了CHIP多人解析数据集, 这个数据集标注的比较精细. <Br>
