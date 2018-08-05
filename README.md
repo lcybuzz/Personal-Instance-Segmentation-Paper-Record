@@ -10,7 +10,7 @@
   - ★★ <Br>
   **[MNC]**, **[InstanceFCN]**, **[Dynamically Instantiated Network]**, **[FCIS]**, **[PANet]**, **[PGN]**<Br>
   - ★ <Br>
-  **[MPA]**, **[DWT]**, **[BAIS]**, **[MaskLab]**, **[InstanceCut]** <Br>
+  **[MPA]**, **[DWT]**, **[BAIS]**, **[MaskLab]**, **[InstanceCut]**, **[SGN]** <Br>
 
 # Deep Learning Methods
 
@@ -175,12 +175,15 @@ https://github.com/matterport/Mask_RCNN <Br>
 4) ROI Align代替ROI pooling, 用双线性插值计算相应位置的feature而不是简单地取整. 这可以大大减小feature的位置偏差, 对预测mask起重要作用. <Br>
 5) Mask R-CNN已集成到Deterctron中, 应掌握这个框架. <Br>
 	
-### **SGN**
+### **SGN ★**
 **[Paper]**  SGN: Sequential grouping networks for instance segmentation <Br>
 **[Year]** ICCV 2017 <Br>
 **[Authors]** [Shu Liu](http://shuliu.me/), [Jiaya Jia](http://www.cse.cuhk.edu.hk/~leojia/), [Sanja Fidler](https://www.cs.utoronto.ca/~fidler/), [Raquel Urtasun](http://www.cs.toronto.edu/~urtasun/) <Br>
 **[Pages]** <Br>
 **[Description]**<Br>
+1) 大致浏览. 与现有的基于分割或检测的方法都不同, 把instance问题看作把许多由breakpoint分割的线段组合起来的问题, 思路有趣, 性能有限, 未开源. <Br>
+2) 由预测breakpoints, 组合breakpoints成线段, 把线组合成连通域, 融合被隔开的实例四部分, 每个阶段都由特别设计的规则和网络组成. <Br>
+
 
 ### **BlitzNet**
 **[Paper]**  BlitzNet: A Real-Time Deep Network for Scene Understanding <Br>
