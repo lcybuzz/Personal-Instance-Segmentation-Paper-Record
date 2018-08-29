@@ -10,7 +10,7 @@
   - ★★ <Br>
   **[MNC]**, **[InstanceFCN]**, **[Dynamically Instantiated Network]**, **[FCIS]**, **[PANet]**<Br>
   - ★ <Br>
-  **[MPA]**, **[DWT]**, **[BAIS]**, **[MaskLab]**, **[InstanceCut]**, **[SGN]**, **[PGN]** <Br>
+  **[MPA]**, **[DWT]**, **[BAIS]**, **[MaskLab]**, **[InstanceCut]**, **[SGN]**, **[PGN]**，**[Monocular Object]** <Br>
 
 # Deep Learning Methods
 
@@ -36,12 +36,13 @@
 **[Description]** <Br>
 	
 
-### ***Monocular Object Instance Segmentation and Depth Ordering with CNNs***
+### ***Monocular Object Instance Segmentation and Depth Ordering with CNNs ☆***
 **[Paper]**  Monocular Object Instance Segmentation and Depth Ordering with CNNs <Br>
 **[Year]** ICCV 2015 <Br>
 **[Authors]** 	[Ziyu Zhang](https://ziyu-zhang.github.io/), [Alexander Schwing](http://alexander-schwing.de/), [Sanja Fidler](http://www.cs.utoronto.ca/~fidler/), [Raquel Urtasun](http://www.cs.toronto.edu/~urtasun/) <Br>
 **[Pages]**   <Br>
 **[Description]** <Br>
+1) 大致浏览, 主要用于城市道路实例分割, 基于patch和MRF. <Br>
 	
 ### **DeepMask**
 **[Paper]**  Learning to segment object candidates <Br>
