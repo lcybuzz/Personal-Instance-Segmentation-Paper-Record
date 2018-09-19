@@ -216,8 +216,8 @@ https://github.com/matterport/Mask_RCNN <Br>
 4) 用了Hypercolumn, atrous, deform conv等多种技术, 目前看来效果不如mask r-cnn(20180721). <Br>
 	
 ### **PGN ★**
-**[Paper]**  MaskLab: Instance Segmentation by Refining Object Detection with Semantic and Direction Features  <Br>
-**[Year]** CVPR 2018 <Br>
+**[Paper]**  Instance-level Human Parsing via Part Grouping Network  <Br>
+**[Year]** ECCV 2018 Oral <Br>
 **[Authors]** [Ke Gong](https://github.com/Engineering-Course), [Xiaodan Liang](http://www.cs.cmu.edu/afs/cs/user/xiaodan1/www/), [Yicheng Li](https://github.com/yicheng-li), [Yimin Chen](https://scholar.google.com/citations?user=rpLGwAQAAAAJ&hl=en), [Ming Yang](https://github.com/ufoym), [Liang Lin](http://www.linliang.net/)<Br>
 **[Pages]** https://github.com/Engineering-Course/CIHP_PGN<Br>
 **[Description]**<Br>
