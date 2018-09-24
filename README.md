@@ -10,7 +10,7 @@
   - ★★ <Br>
   **[MNC]**, **[InstanceFCN]**, **[Dynamically Instantiated Network]**, **[FCIS]**, **[PANet]**<Br>
   - ★ <Br>
-  **[MPA]**, **[DWT]**, **[BAIS]**, **[MaskLab]**, **[InstanceCut]**, **[SGN]**, **[PGN]**，**[Monocular Object]** <Br>
+  **[MPA]**, **[DWT]**, **[BAIS]**, **[MaskLab]**, **[InstanceCut]**, **[SGN]**, **[PGN]**，**[Monocular Object]**, **[DeepMask]**, **[SharpMask]** <Br>
 
 # Deep Learning Methods
 
@@ -44,12 +44,23 @@
 **[Description]** <Br>
 1) 大致浏览, 主要用于城市道路实例分割, 基于patch和MRF. <Br>
 	
-### **DeepMask**
+### **DeepMask ★**
 **[Paper]**  Learning to segment object candidates <Br>
 **[Year]** NIPS 2015 <Br>
 **[Authors]** 	[Pedro O. Pinheiro](http://www.pedro.opinheiro.com/), [Tsung-Yi Lin](https://scholar.google.de/citations?user=_BPdgV0AAAAJ&hl=en&oi=sra), [Ronan Collobert](https://scholar.google.de/citations?user=32w7x1cAAAAJ&hl=en&oi=sra), [Piotr Dollàr](https://pdollar.github.io/) <Br>
 **[Pages]**   <Br>
 **[Description]** <Br>
+1) 大致浏览. DL做instance segmentation较早的一篇paper, 目前因性能有效基本无法使用. 
+2) 网络分为两支, 一支预测segmentation mask, 另一支预测该patch是目标的概率. 结果是category agnostic的<Br> 
+
+### **SharpMask ★**
+**[Paper]**  Learning to Refine Object Segments <Br>
+**[Year]** ECCV 2016 Spotlight <Br>
+**[Authors]** [Pedro O. Pinheiro](http://www.pedro.opinheiro.com/), [Tsung-Yi Lin](https://scholar.google.de/citations?user=_BPdgV0AAAAJ&hl=en&oi=sra), [Ronan Collobert](https://scholar.google.de/citations?user=32w7x1cAAAAJ&hl=en&oi=sra), [Piotr Dollàr](https://pdollar.github.io/) <Br> 
+**[Pages]**  <Br>
+**[Description]** <Br>
+1) 大致浏览, 基于DeepMask做了改进,  目前因性能有效基本无法使用. <Br>
+2) segmentation一支采用类似encoder-decoder的结构, 融合高分辨和低分辨率的特征图, 以利用low level特征的空间信息和high level的全局目标信息. <Br>
 
 ### **MNC ★★**
 **[Paper]**  Instance-aware Semantic Segmentation via Multi-task Network Cascades<Br>
@@ -62,13 +73,6 @@
 3) 预测mask, 即得出每个bbox中的二值mask. bbox经过ROI Warp到固定尺寸, 用2个全连接层完成每个像素的二值分类. <Br>
 4) 分类, 即根据bbox和mask得到当前instance的类别. 此处对于输入特征考虑了两种选择, 一是直接将bbox的特征作为输入, 二是将bbox的特征与mask做点乘, 只输出mask部分的特征其余位置置零. <Br>
 5) 设计了5层的级联网络, 上述的三个步骤即为stage 1, 2, 3, 接下来以前面得到的class和bbox组成proposal, 再次进行mask预测和分类, 即重复stage 2和3. <Br>
-	
-### **SharpMask**
-**[Paper]**  ILearning to Refine Object Segments <Br>
-**[Year]** ECCV 2016 Spotlight <Br>
-**[Authors]** [Pedro O. Pinheiro](http://www.pedro.opinheiro.com/), [Tsung-Yi Lin](https://scholar.google.de/citations?user=_BPdgV0AAAAJ&hl=en&oi=sra), [Ronan Collobert](https://scholar.google.de/citations?user=32w7x1cAAAAJ&hl=en&oi=sra), [Piotr Dollàr](https://pdollar.github.io/) <Br> 
-**[Pages]**  <Br>
-**[Description]** <Br>
 
 ### **InstanceFCN ★★**
 **[Paper]**  Instace-sensitive Fully Convolutional Networks <Br>
