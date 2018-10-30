@@ -239,3 +239,12 @@ https://github.com/matterport/Mask_RCNN <Br>
 1) 粗读, 提出了一个用于街景的实例分割方案, 在cityscape和kitti上达到了10FPS的速度, 整体是偏工程的, trick很多. <Br>
 2) 基于GoogleNet V1, 完成了三个子任务: 基于SSD的目标检测, 语义分割, 预测center offset. Loss计算时使用了task uncertainty技巧; SSD的prior box是根据数据集特点手动定义的; SSD在对应预测框和真值时用了"相对坐标变化"来代替IoU, 能更好地利用bounding box. <Br>
 3) 一些具体实现没细看, 也没有代码供参考. 疑问: 网络是以**原尺寸作为输入的？**
+	
+	
+# Datasets
+[MSCOCO](http://cocodataset.org/#home) <Br>
+[Cityscapes](https://www.cityscapes-dataset.com/) <Br>
+
+
+# Leaderboards
+[Cityscapes](https://www.cityscapes-dataset.com/benchmarks/#instance-level-scene-labeling-task) <Br>
