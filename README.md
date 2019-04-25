@@ -230,6 +230,13 @@ https://github.com/matterport/Mask_RCNN <Br>
 3) instance partition部分, 首先水平和垂直地扫描, 根据edge确定属于同一instance的segments, 这些线段组成一连通图; 用BFS找到属于同一instance的pixel; 最后进行grouping, 去掉边缘检测的一些假边缘产生的小区域. <Br>
 4) 提出了CHIP多人解析数据集, 这个数据集标注的比较精细. <Br>
 
+### ***Learning to Segment Every Thing***
+**[Paper]**  Learning to Segment Every Thing  <Br>
+**[Year]** CVPR 2018 <Br>
+**[Authors]** [Ronghang Hu](http://ronghanghu.com/), [Piotr Dollar](https://pdollar.github.io/), [Kaiming He](http://kaiminghe.com/), [Trevor Darrell](https://people.eecs.berkeley.edu/~trevor/), [Ross Girshick](http://www.rossgirshick.info/)<Br>
+**[Pages]** http://ronghanghu.com/seg_every_thing/ <Br>
+**[Description]**<Br>
+	
 ### **Box2Pixel ★**
 **[Paper]**  Box2Pix: Single-Shot Instance Segmentation by Assigning Pixels to Object Boxes  <Br>
 **[Year]** IEEE Intelligent Vehicles Symposium (IV), 2018 <Br>
