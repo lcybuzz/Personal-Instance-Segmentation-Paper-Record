@@ -10,7 +10,7 @@
   - ★★ <Br>
   **[MNC]**, **[InstanceFCN]**, **[Dynamically Instantiated Network]**, **[FCIS]**, **[PANet]**<Br>
   - ★ <Br>
-  **[MPA]**, **[DWT]**, **[BAIS]**, **[MaskLab]**, **[InstanceCut]**, **[SGN]**, **[PGN]**，**[Monocular Object]**, **[DeepMask]**, **[SharpMask]**, **[Box2Pixel]** <Br>
+  **[MPA]**, **[DWT]**, **[BAIS]**, **[MaskLab]**, **[InstanceCut]**, **[SGN]**, **[PGN]**，**[Monocular Object]**, **[DeepMask]**, **[SharpMask]**, **[Box2Pixel]**, **[MS R-CNN]** <Br>
 
 # Deep Learning Methods
 
@@ -239,6 +239,16 @@ https://github.com/matterport/Mask_RCNN <Br>
 1) 粗读, 提出了一个用于街景的实例分割方案, 在cityscape和kitti上达到了10FPS的速度, 整体是偏工程的, trick很多. <Br>
 2) 基于GoogleNet V1, 完成了三个子任务: 基于SSD的目标检测, 语义分割, 预测center offset. Loss计算时使用了task uncertainty技巧; SSD的prior box是根据数据集特点手动定义的; SSD在对应预测框和真值时用了"相对坐标变化"来代替IoU, 能更好地利用bounding box. <Br>
 3) 一些具体实现没细看, 也没有代码供参考. 疑问: 网络是以**原尺寸作为输入的？**
+
+### **MS R-CNN ★☆**
+**[Paper]** Mask Scoring R-CNN <Br>
+**[Year]** CVPR 2019 Oral <Br>
+**[Authors]** [Zhaojin Huang](https://github.com/zjhuang22), [Lichao Huang](https://scholar.google.com/citations?user=F2e_jZMAAAAJ&hl=en), [Yongchao Gong](https://dblp.org/pers/hd/g/Gong:Yongchao), [Chang Huang](https://scholar.google.com/citations?user=IyyEKyIAAAAJ&hl=zh-CN), [Xinggang Wang](http://www.xinggangw.info/index.htm)<Br>
+**[Pages]** https://github.com/zjhuang22/maskscoring_rcnn <Br>
+**[Description]**<Br>
+1) 创新点是提出了MaskIoU Head, 简单易行, 通用性强. 在Mask R-CNN的基础上进一步提升了性能. <Br>
+2) MaskIoU Head以ROI feature和Mask Head输出concat起来为输入, 输出Mask IoU, 使用回归的方式优化. 测试时只用Mask IoU去修正分类的分数. <Br>
+3) 做了大量ablation study, 如有需要, 可再细读. <Br>
 	
 	
 # Datasets
